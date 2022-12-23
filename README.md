@@ -1,3 +1,39 @@
+API Description
+
+This API uses the Github API for calling a list of github user/s and can be saved as bookmarks in the database. Bookmarks are saved with tags as fields in the db that represent the notes for categorizing bookmarks.
+
+Endpoints:
+
+/api-integration/github
+-calls the github api to return a list of github users
+
+/api-integration/github/:username
+-calls the github api to return a specific user using its username
+
+/bookmarks/save
+-saves a bookmarkd github user to the database
+-request body in postman collection
+
+/bookmarks/saved
+-gets a list of the saved bookmarks
+
+/bookmarks/saved/:id
+-gets a specific bookmark using id
+
+/bookmarks/tags/:tag
+-gets a list of bookmarks based on the tag sent
+
+/bookmarks/update/:id
+-updates a tag of a specific bookmark
+-request body in postman collection
+
+/bookmarks/delete/:id
+-deletes a specific bookmark
+
+
+
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
