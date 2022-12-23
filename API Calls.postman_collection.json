@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "f1636a6a-a100-4571-a69d-ad41702ec520",
+		"name": "API Calls",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14220747"
+	},
+	"item": [
+		{
+			"name": "API Integration",
+			"item": [
+				{
+					"name": "Get User from Github",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api-integration/github/mojombo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api-integration",
+								"github",
+								"mojombo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users from GIthub",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api-integration/github/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api-integration",
+								"github",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD API",
+			"item": [
+				{
+					"name": "Get Saved Bookmarks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/bookmarks/saved/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"bookmarks",
+								"saved",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Saved Bookmark by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/bookmarks/saved/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"bookmarks",
+								"saved",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save a New Bookmark",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"mojombo\",\r\n    \"name\": \"Tom Preston-Werner\",\r\n    \"repositories_url\": \"https://github.com/mojombo\",\r\n    \"tag\" : \"backend notes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/bookmarks/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"bookmarks",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Bookmark Tag",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tag\": \"backend notes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/bookmarks/update/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"bookmarks",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Saved Bookmark",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/bookmarks/delete/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"bookmarks",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Bookmarks By Tags",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/bookmarks/tags/backend notes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"bookmarks",
+								"tags",
+								"backend notes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
